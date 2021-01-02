@@ -7,4 +7,9 @@ generando componentes
 instalación de las librerías bootstrap y jquery con npm
     npm install bootstrap --save
     npm install jquery --save
-    npm install popper --save
+    npm install popper.js --save
+
+generando los demás componentes
+    ng generate component components/about
+con el parametro -is no genera el archivo de estilos de ese componente
+    ng generate component components/heroes -is
