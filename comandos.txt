@@ -2,7 +2,7 @@ ng new single-page-application
 
 generando componentes
     ng generate component components/shared/navbar
-    g generate component components/home
+    ng generate component components/home
 
 instalación de las librerías bootstrap y jquery con npm
     npm install bootstrap --save
