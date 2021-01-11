@@ -13,3 +13,6 @@ generando los demás componentes
     ng generate component components/about
 con el parametro -is no genera el archivo de estilos de ese componente
     ng generate component components/heroes -is
+
+generando el componente heroe 
+    ng generate component components/heroe -is

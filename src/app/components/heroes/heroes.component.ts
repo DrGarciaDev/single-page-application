@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HeroesService, Heroe } from '../../services/heroes.service';
 
 @Component({
@@ -9,7 +10,7 @@ export class HeroesComponent implements OnInit {
 
   heroes:Heroe[] = [];
 
-  constructor( private _heroesService: HeroesService ) { 
+  constructor( private _heroesService: HeroesService, private router: Router) { 
     console.log('Constructor');
   }
 
@@ -20,4 +21,8 @@ export class HeroesComponent implements OnInit {
     console.log(this.heroes);
   }
 
+  verHeroe(idx:number) {
+    this.router.navigate( ['/heroe', idx] );
+    console.log(idx);
+  }
 }
