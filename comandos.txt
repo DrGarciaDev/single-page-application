@@ -16,3 +16,9 @@ con el parametro -is no genera el archivo de estilos de ese componente
 
 generando el componente heroe 
     ng generate component components/heroe -is
+
+generando el componente para el buscador
+    ng generate component components/buscador -is
+
+generando componente para tarjeta
+    ng generate component components/heroeTarjeta -is
