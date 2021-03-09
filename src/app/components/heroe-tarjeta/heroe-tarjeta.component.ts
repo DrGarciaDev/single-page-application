@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,16 +9,23 @@ import { Router } from '@angular/router';
 })
 export class HeroeTarjetaComponent implements OnInit {
 
+  // para recibir parametros o propiedades desde el componente padre
   @Input() heroe:any = {};
   @Input() index:number;
 
-  constructor( private router:Router) { }
+  // para enviar eventos o propiedades dsede e componente hjo al padre 
+  @Output() heroeSeleccionado: EventEmitter<number>
+
+  constructor( private router:Router) { 
+    this.heroeSeleccionado = new EventEmitter();
+  }
 
   ngOnInit(): void {
   }
 
   verHeroe() {
-    this.router.navigate( ['/heroe', this.index] )
+    // this.router.navigate( ['/heroe', this.index] )
+    this.heroeSeleccionado.emit( this.index );
   }
 
 }
